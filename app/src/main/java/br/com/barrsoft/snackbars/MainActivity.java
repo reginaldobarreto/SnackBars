@@ -1,5 +1,6 @@
 package br.com.barrsoft.snackbars;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
     @BindView(R.id.floatingActionButton)
     FloatingActionButton floatingActionButton;
+    View viewSnack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(TAG, "submit:");
         Snackbar snackbar = Snackbar.make(view,getString(R.string.snack_title),Snackbar.LENGTH_INDEFINITE);
+
+        viewSnack = snackbar.getView();
+        snackbar.setActionTextColor(Color.WHITE);
+        viewSnack.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         snackbar.setAction(getString(R.string.snack_action), new View.OnClickListener() {
             @Override
             public void onClick(View v) {

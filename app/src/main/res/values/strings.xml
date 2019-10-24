@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Snackbars</string>
-    <string name="snack_action">Fechar</string>
-    <string name="snack_title">Item Removido</string>
+    <string name="snack_action">FECHAR</string>
+    <string name="snack_title">ITEM REMOVIDO</string>
 </resources>
