@@ -2,6 +2,7 @@ package br.com.barrsoft.snackbars;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // TODO submit data to server...
 
         Log.i(TAG, "submit:");
-        Snackbar snackbar = Snackbar.make(view,"Teste",Snackbar.LENGTH_INDEFINITE);
+        Snackbar snackbar = Snackbar.make(view,getString(R.string.snack_title),Snackbar.LENGTH_INDEFINITE);
         snackbar.setAction(getString(R.string.snack_action), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
