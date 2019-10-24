@@ -36,7 +36,13 @@ public class MainActivity extends AppCompatActivity {
         // TODO submit data to server...
 
         Log.i(TAG, "submit:");
-        Snackbar snackbar = Snackbar.make(view,"Teste",Snackbar.LENGTH_LONG);
+        Snackbar snackbar = Snackbar.make(view,"Teste",Snackbar.LENGTH_INDEFINITE);
+        snackbar.setAction(getString(R.string.snack_action), new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snackbar.dismiss();
+            }
+        });
         snackbar.show();
     }
 
